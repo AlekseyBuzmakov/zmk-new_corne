@@ -73,7 +73,7 @@
                              &kp ESC &kp TAB  &kp SPACE                                              &kp SPACE &kp BSPC  &kp ENTER
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&rgb_encoder>;
         };
 
         lower_layer {
