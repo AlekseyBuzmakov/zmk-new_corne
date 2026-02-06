@@ -43,7 +43,7 @@
             bindings
                 = <&kp CAPS>
                 , <&kp CAPS>
-                , <&to QWERTY>
+                , <&to qwerty_layer>
                 ;
         };
         lang_dvp: lang_dvp {
