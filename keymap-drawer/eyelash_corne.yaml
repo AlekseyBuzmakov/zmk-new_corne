@@ -99,12 +99,12 @@ layers:
   - {t: '$$mdi:backspace$$', h: Fn}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   NUMBER:
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '1', s: '!'}
-  - {t: '2', s: '@'}
-  - {t: '3', s: '#'}
-  - {t: '4', s: $}
-  - {t: '5', s: '%'}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: Sft+5, s: Sft+%}
+  - {t: Sft+6, s: Sft+^}
+  - {t: Sft+4, s: Sft+$}
+  - {t: Sft+4, s: Sft+$}
+  - {t: \, s: '|'}
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - {t: '6', s: ^}
   - {t: '7', s: '&'}
@@ -112,22 +112,22 @@ layers:
   - {t: '9', s: (}
   - {t: '0', s: )}
   - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - BT CLR ALL
-  - {h: '1', s: '$$mdi:bluetooth-connect$$'}
-  - {h: '2', s: '$$mdi:bluetooth-connect$$'}
-  - {h: '3', s: '$$mdi:bluetooth-connect$$'}
-  - {h: '4', s: '$$mdi:bluetooth-connect$$'}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: Sft+2, s: Sft+@}
+  - '&tdh2 LS(9) LALT LS(N0)'
+  - {t: E, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: U, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: I, h: Sft+/}
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
-  - $$mdi:arrow-left-bold$$
-  - $$mdi:arrow-down-bold$$
-  - $$mdi:arrow-up-bold$$
-  - $$mdi:arrow-right-bold$$
-  - HOME
-  - PG UP
-  - {t: '$$mdi:transfer$$', type: trans}
+  - D
+  - {t: H, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: T, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: N, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: S, h: RGUI}
+  - $$mdi:volume-low$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - RGB OFF
   - RGB ON
   - {t: '$$mdi:transfer$$', type: trans}
@@ -141,12 +141,12 @@ layers:
   - RGB BRD
   - END
   - PG DN
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
-  - {t: INS, type: held alternate}
-  - $$mdi:backspace-reverse-outline$$
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:keyboard-tab$$
+  - $$mdi:keyboard-esc$$
+  - {t: SPC, type: held}
+  - {t: '$$mdi:keyboard-space$$', type: held alternate}
+  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: '$$mdi:backspace$$', type: backspace}
   ARROWS:
   - {t: '$$mdi:transfer$$', type: trans}
   - '!'
