@@ -104,10 +104,6 @@
             bindings = <&soft_off>;
             key-positions = <1 15 29>;
         };
-        rich_mode {
-            bindings = <&xxx>;
-            key-positions = <42 44 47>;
-        };
     };
 
     keymap {
