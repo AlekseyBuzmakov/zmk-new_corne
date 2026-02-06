@@ -115,7 +115,7 @@
 
         default_layer {
             display-name = "QWERTY";
-	    # 0	14 28 42 
+	    // 0 14 28 42 
             bindings = <
 &none  &q_ru        &kp W      &kp E     &kp R  &mt GRAVE T                            &mmv MOVE_UP                  &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSPC
 &cps   &hml LGUI A  &hml LALT S &hml LCTRL D &hml LSHIFT F  &kp G              &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &hmr RSHIFT H        &hmr RCTRL J  &hmr RALT K      &hmr RGUI L    &kp SEMI  &kp SQT
