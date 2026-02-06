@@ -43,7 +43,7 @@
             bindings
                 = <&kp CAPS>
                 , <&kp CAPS>
-                , <&to qwerty_layer>
+                , <&to 0>
                 ;
         };
         lang_dvp: lang_dvp {
@@ -51,7 +51,7 @@
             #binding-cells = <0>;
             bindings
                 = <&kp CAPS>
-                , <&to dvorak_layer>
+                , <&to 1>
                 ;
         };
         lang_en: lang_en {
@@ -59,7 +59,7 @@
             #binding-cells = <0>;
             bindings
                 = <&kp CAPS>
-                , <&to qwerty_layer>
+                , <&to 0>
                 ;
         };
     };
@@ -145,7 +145,7 @@
 &cps   &hml LGUI A  &hml LALT S &hml LCTRL D &hml LSHIFT F &mt LS(N7) G    &mmv MOVE_LEFT &mkp LCLK &mmv MOVE_RIGHT  &hmr RSHIFT H &hmr RCTRL J &hmr RALT K        &hmr RGUI L &kp SEMI  &kp C_VOL_DOWN
 &none  &mt LS(2) Z  &kp X       &kp C        &kp V  	   &kp B     &kp C_MUTE         &mmv MOVE_DOWN               &kp N         &mt RBKT M   &kp COMMA          &kp DOT     &kp FSLH  &kp C_MUTE
 
-                             &kp ESC &mt <&mo arrow_layer> TAB  &hml <&mo number_layer> SPACE                            &hmr <&mo number_layer> SPACE &mt <&mo fn_layer> BSPC  &kp ENTER
+                             &kp ESC &lt arrow_layer TAB  &hml <&mo number_layer> SPACE                            &hmr <&mo number_layer> SPACE &lt fn_layer BSPC  &kp ENTER
             >;
 
             sensor-bindings = <&rgb_encoder>;
@@ -159,7 +159,7 @@
 &cps   &hml LGUI A  &hml LALT S &hml LCTRL D &hml LSHIFT F &mt LS(N7) G    &mmv MOVE_LEFT &mkp LCLK &mmv MOVE_RIGHT  &hmr RSHIFT H &hmr RCTRL J &hmr RALT K        &hmr RGUI L &kp SEMI  &kp C_VOL_DOWN
 &none  &mt LS(2) Z  &kp X       &kp C        &kp V  	   &kp B     &kp C_MUTE         &mmv MOVE_DOWN               &kp N         &mt RBKT M   &kp COMMA          &kp DOT     &kp FSLH  &kp C_MUTE
 
-                             &kp ESC &mt <&mo arrow_layer> TAB  &hml <&mo number_layer> SPACE                                                     hmr <&mo number_layer> SPACE &mt <&mo fn_layer> BSPC  &kp ENTER
+                             &kp ESC &lt arrow_layer TAB  &hml <&mo number_layer> SPACE                            &hmr <&mo number_layer> SPACE &lt fn_layer BSPC  &kp ENTER
             >;
 
             sensor-bindings = <&rgb_encoder>;
