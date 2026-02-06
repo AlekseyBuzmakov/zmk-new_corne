@@ -36,6 +36,34 @@
 };
 
 / {
+    macros {
+        lang_ru: lang_ru {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&kp CAPS>
+                , <&kp CAPS>
+                , <&to QWERTY>
+                ;
+        };
+        lang_dvp: lang_dvp {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&kp CAPS>
+                , <&to dvorak_layer>
+                ;
+        };
+        lang_en: lang_en {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&kp CAPS>
+                , <&to qwerty_layer>
+                ;
+        };
+    };
+
     behaviors {
         hml: home_row_mod_left {
             compatible = "zmk,behavior-hold-tap";
@@ -73,7 +101,7 @@
             compatible = "zmk,behavior-tap-dance";
             display-name = "Shift/Caps Lock Tap Dance";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
+            bindings = <&lang_dvp>, <&lang_ru>, <&lang_en>;
         };
         q_ru: tap_dance_mod_tap {
             compatible = "zmk,behavior-tap-dance";
@@ -109,20 +137,35 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        qwerty_layer {
             display-name = "QWERTY";
 	    // 0 14 28 42 
             bindings = <
-&none  &q_ru        &kp W      &kp E     &kp R  &mt GRAVE T                            &mmv MOVE_UP                  &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&cps   &hml LGUI A  &hml LALT S &hml LCTRL D &hml LSHIFT F  &kp G              &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &hmr RSHIFT H        &hmr RCTRL J  &hmr RALT K      &hmr RGUI L    &kp SEMI  &kp SQT
-&none  &mt LS(2) Z  &kp X      &kp C     &kp V  &kp B       &kp C_MUTE          &mmv MOVE_DOWN                 &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp BSPC
-                             &kp ESC &kp TAB  &kp SPACE                                              &kp SPACE &kp BSPC  &kp ENTER
+&none  &q_ru        &kp W       &kp E        &kp R         &mt GRAVE T                   &mmv MOVE_UP                &kp Y         &mt LBKT U   &mt SINGLE_QUOTE I &kp O       &kp P     &kp C_VOL_UP
+&cps   &hml LGUI A  &hml LALT S &hml LCTRL D &hml LSHIFT F &mt LS(N7) G    &mmv MOVE_LEFT &mkp LCLK &mmv MOVE_RIGHT  &hmr RSHIFT H &hmr RCTRL J &hmr RALT K        &hmr RGUI L &kp SEMI  &kp C_VOL_DOWN
+&none  &mt LS(2) Z  &kp X       &kp C        &kp V  	   &kp B     &kp C_MUTE         &mmv MOVE_DOWN               &kp N         &mt RBKT M   &kp COMMA          &kp DOT     &kp FSLH  &kp C_MUTE
+
+                             &kp ESC &mt <&mo arrow_layer> TAB  &hml <&mo number_layer> SPACE                            &hmr <&mo number_layer> SPACE &mt <&mo fn_layer> BSPC  &kp ENTER
             >;
 
             sensor-bindings = <&rgb_encoder>;
         };
 
-        lower_layer {
+        dvorak_layer {
+            display-name = "DVORAK";
+	    // 0 14 28 42 
+            bindings = <
+&none  &q_ru        &kp W       &kp E        &kp R         &mt GRAVE T                   &mmv MOVE_UP                &kp Y         &mt LBKT U   &mt SINGLE_QUOTE I &kp O       &kp P     &kp C_VOL_UP
+&cps   &hml LGUI A  &hml LALT S &hml LCTRL D &hml LSHIFT F &mt LS(N7) G    &mmv MOVE_LEFT &mkp LCLK &mmv MOVE_RIGHT  &hmr RSHIFT H &hmr RCTRL J &hmr RALT K        &hmr RGUI L &kp SEMI  &kp C_VOL_DOWN
+&none  &mt LS(2) Z  &kp X       &kp C        &kp V  	   &kp B     &kp C_MUTE         &mmv MOVE_DOWN               &kp N         &mt RBKT M   &kp COMMA          &kp DOT     &kp FSLH  &kp C_MUTE
+
+                             &kp ESC &mt <&mo arrow_layer> TAB  &hml <&mo number_layer> SPACE                                                     hmr <&mo number_layer> SPACE &mt <&mo fn_layer> BSPC  &kp ENTER
+            >;
+
+            sensor-bindings = <&rgb_encoder>;
+        };
+
+        number_layer {
             display-name = "NUMBER";
             bindings = <
 &trans  &kp N1           &kp N2          &kp N3        &kp N4        &kp N5                                         &mmv MOVE_UP                     &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &kp BSPC
@@ -134,8 +177,8 @@
             sensor-bindings = <&scroll_encoder>;
         };
 
-        raise_layer {
-            display-name = "SYMBOL";
+        arrow_layer {
+            display-name = "ARROWS";
             bindings = <
 &trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT                            &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
 &trans  &bt BT_CLR    &mkp LCLK     &mkp MCLK  &mkp RCLK  &mkp MB4             &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
@@ -146,7 +189,7 @@
             sensor-bindings = <&scroll_encoder>;
         };
 
-        layer_3 {
+        fn_layer {
             display-name = "Fn";
             bindings = <
 &studio_unlock  &kp F1      &kp F2     &kp F3       &kp F4     &kp F5                                  &mmv MOVE_UP                     &kp F6       &kp F7     &kp F8       &kp F9      &kp F10          &kp F11
