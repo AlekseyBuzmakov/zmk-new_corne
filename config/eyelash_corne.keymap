@@ -110,6 +110,12 @@
             tapping-term-ms = <185>;
             bindings = <&mt Q LS(N4)>, <&kp LS(N6)>;
         };
+        td2: tap_dance_mod_tap {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <2>;
+            tapping-term-ms = <185>;
+            bindings = <&kp>, <&kp>;
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -169,10 +175,11 @@
         number_layer {
             display-name = "NUMBER";
             bindings = <
-&trans  &kp N1           &kp N2          &kp N3        &kp N4        &kp N5                                         &mmv MOVE_UP                     &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &kp BSPC
-&trans  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp HOME  &kp PG_UP
-&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                   &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END   &kp PG_DN
-                                         &trans        &trans        &trans                                                                          &kp INS          &kp DEL          &trans
+&none  &kp LS(N5)         &kp LS(N6)     &kp LS(N4)     &kp LS(N4)        &kp BSLH                                   &mmv MOVE_UP                     &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &kp BSPC
+&none  &kp LS(N2)   &hml LALT <&td LS(9) LS(0)>  &hml LCTRL E  &hml LSHIFT U  &mt LS(FSLH) I    &mmv MOVE_LEFT &mkp LCLK &mmv MOVE_RIGHT  &kp D &hmr RSHIFT H &hmr RCTRL T &hmr RALT N &hmr RGUI S &kp C_VOL_DN
+&none  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                   &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END   &kp PG_DN
+
+                             &kp TAB &kp ESC &kp SPC                            &kp SPACE &kp ENTER &kp BSPC  
             >;
 
             sensor-bindings = <&scroll_encoder>;
