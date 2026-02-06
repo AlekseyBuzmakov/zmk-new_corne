@@ -26,15 +26,60 @@
     trigger-period-ms = <16>;
 };
 
-&soft_off { hold-time-ms = <2000>; };
+&mt {
+    tapping-term-ms = <185>;
+};
+
+
+&soft_off { 
+    hold-time-ms = <2000>; 
+};
 
 / {
     behaviors {
-        td0: td0 {
+        hml: home_row_mod_left {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            require-prior-idle-ms = <125>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = < 
+		 7  8  9 10 11 12 13
+		21 22 23 24 25 26 27
+		35 36 37 38 39 40 41
+		45 46 47
+            >; // List of keys on the right side of the keyboard
+            hold-trigger-on-release;
+        };
+        hmr: home_row_mod_right {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            require-prior-idle-ms = <125>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <
+		 0  1  2  3  4  5  6
+		14 15 16 17 18 19 20
+		28 29 30 31 32 33 34
+		42 43 44
+            >; // List of keys on the left side of the keyboard
+            hold-trigger-on-release;
+        };
+        cps: cps {
             compatible = "zmk,behavior-tap-dance";
             display-name = "Shift/Caps Lock Tap Dance";
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
+        };
+        q_ru: tap_dance_mod_tap {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <185>;
+            bindings = <&mt Q LS(N4)>, <&kp LS(N6)>;
         };
     };
 
@@ -59,6 +104,10 @@
             bindings = <&soft_off>;
             key-positions = <1 15 29>;
         };
+        rich_mode {
+            bindings = <&xxx>;
+            key-positions = <42 44 47>;
+        };
     };
 
     keymap {
@@ -66,10 +115,11 @@
 
         default_layer {
             display-name = "QWERTY";
+	    # 0	14 28 42 
             bindings = <
-&kp TAB         &kp Q  &kp W      &kp E     &kp R  &kp T                            &mmv MOVE_UP                  &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&td0            &kp A  &kp S      &kp D     &kp F  &kp G              &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LEFT_SHIFT  &kp Z  &kp X      &kp C     &kp V  &kp B       &kp C_MUTE          &mmv MOVE_DOWN                 &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp BSPC
+&none  &q_ru        &kp W      &kp E     &kp R  &mt GRAVE T                            &mmv MOVE_UP                  &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSPC
+&cps   &hml LGUI A  &hml LALT S &hml LCTRL D &hml LSHIFT F  &kp G              &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &hmr RSHIFT H        &hmr RCTRL J  &hmr RALT K      &hmr RGUI L    &kp SEMI  &kp SQT
+&none  &mt LS(2) Z  &kp X      &kp C     &kp V  &kp B       &kp C_MUTE          &mmv MOVE_DOWN                 &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp BSPC
                              &kp ESC &kp TAB  &kp SPACE                                              &kp SPACE &kp BSPC  &kp ENTER
             >;
 
