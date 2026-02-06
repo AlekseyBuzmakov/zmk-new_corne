@@ -142,9 +142,9 @@
             display-name = "QWERTY";
 	    // 0 14 28 42 
             bindings = <
-&none  &q_ru        &kp W       &kp E        &kp R         &mt GRAVE T                   &mmv MOVE_UP                &kp Y         &mt LBKT U   &mt SINGLE_QUOTE I &kp O       &kp P     &kp C_VOL_UP
-&cps   &hml LGUI A  &hml LALT S &hml LCTRL D &hml LSHIFT F &mt LS(N7) G    &mmv MOVE_LEFT &mkp LCLK &mmv MOVE_RIGHT  &hmr RSHIFT H &hmr RCTRL J &hmr RALT K        &hmr RGUI L &kp SEMI  &kp C_VOL_DN
-&none  &mt LS(N2) Z  &kp X       &kp C        &kp V  	   &kp B     &kp C_MUTE         &mmv MOVE_DOWN               &kp N         &mt RBKT M   &kp COMMA          &kp DOT     &kp FSLH  &kp C_MUTE
+&none  &q_ru        &kp W       &kp E        &kp R         &mt GRAVE T                   &mmv MOVE_UP                &kp Y &mt LBKT U    &mt SINGLE_QUOTE I &kp O       &kp P          &kp C_VOL_UP
+&cps   &hml LGUI A  &hml LALT S &hml LCTRL D &hml LSHIFT F &mt LS(N7) G    &mmv MOVE_LEFT &mkp LCLK &mmv MOVE_RIGHT  &kp H &hmr RSHIFT J &hmr RCTRL K       &hmr RALT L &hmr RGUI SEMI &kp C_VOL_DN
+&none  &mt LS(N2) Z  &kp X       &kp C        &kp V  	   &kp B     &kp C_MUTE         &mmv MOVE_DOWN               &kp N &mt RBKT M    &kp COMMA          &kp DOT     &kp FSLH       &kp C_MUTE
 
                              &kp ESC &lt 3 TAB  &lt 2 SPACE                            &lt 2 SPACE &lt 4 BSPC  &kp ENTER
             >;
@@ -156,9 +156,9 @@
             display-name = "DVORAK";
 	    // 0 14 28 42 
             bindings = <
-&none  &q_ru        &kp W       &kp E        &kp R         &mt GRAVE T                   &mmv MOVE_UP                &kp Y         &mt LBKT U   &mt SINGLE_QUOTE I &kp O       &kp P     &kp C_VOL_UP
-&cps   &hml LGUI A  &hml LALT S &hml LCTRL D &hml LSHIFT F &mt LS(N7) G    &mmv MOVE_LEFT &mkp LCLK &mmv MOVE_RIGHT  &hmr RSHIFT H &hmr RCTRL J &hmr RALT K        &hmr RGUI L &kp SEMI  &kp C_VOL_DN
-&none  &mt LS(N2) Z  &kp X       &kp C        &kp V  	   &kp B     &kp C_MUTE         &mmv MOVE_DOWN               &kp N         &mt RBKT M   &kp COMMA          &kp DOT     &kp FSLH  &kp C_MUTE
+&none  &kp SEMI     &kp COMMA    &kp DOT        &kp P         &kp Y                           &mmv MOVE_UP                &kp F &kp G         &kp C        &kp R       &kp L       &kp C_VOL_UP
+&cps   &hml LGUI A  &hml LALT O  &hml LCTRL E  &hml LSHIFT U  &mt LS(FSLH) I    &mmv MOVE_LEFT &mkp LCLK &mmv MOVE_RIGHT  &kp D &hmr RSHIFT H &hmr RCTRL T &hmr RALT N &hmr RGUI S &kp C_VOL_DN
+&none  &mt LS(SINGLE_QUOTE) SINGLE_QUOTE &kp Q &kp J &kp K    &kp X    &kp C_MUTE            &mmv MOVE_DOWN               &kp B &kp M         &kp W        &kp V       &kp Z       &kp C_MUTE
 
                              &kp ESC &lt 3 TAB  &lt 2 SPACE                            &lt 2 SPACE &lt 4 BSPC  &kp ENTER
             >;
