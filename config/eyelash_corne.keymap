@@ -114,19 +114,19 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <185>;
-            bindings = <&mt LBKT LALT>, <&kp RBKT>;
+            bindings = <&mt LALT LBKT>, <&kp RBKT>;
         };
         num_d: num_d {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <185>;
-            bindings = <&mt LS(LBKT) LALT>, <&kp LS(RBKT)>;
+            bindings = <&mt LCTLR LS(LBKT)>, <&kp LS(RBKT)>;
         };
         num_f: num_f {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <185>;
-            bindings = <&mt LS(N9) LALT>, <&kp LS(N0)>;
+            bindings = <&mt LSHIFT LS(N9)>, <&kp LS(N0)>;
         };
     };
 
@@ -160,7 +160,7 @@
             display-name = "QWERTY";
 	    // 0 14 28 42 
             bindings = <
-&none  &q_ru        &kp W       &kp E        &kp R         &mt GRAVE T                   &mmv MOVE_UP                &kp Y &mt LBKT U    &mt SINGLE_QUOTE I &kp O       &kp P          &kp C_VOL_UP
+&none  &q_ru        &kp W       &kp E        &kp R         &mt GRAVE T                   &mmv MOVE_UP                &kp Y &mt LBKT U    &mt SINGLE_QUOTE I &kp O       &mt P LS(BSLH)          &kp C_VOL_UP
 &cps   &hml LGUI A  &hml LALT S &hml LCTRL D &hml LSHIFT F &mt LS(N7) G    &mmv MOVE_LEFT &mkp LCLK &mmv MOVE_RIGHT  &kp H &hmr RSHIFT J &hmr RCTRL K       &hmr RALT L &hmr RGUI SEMI &kp C_VOL_DN
 &none  &mt LS(N2) Z  &kp X       &kp C        &kp V  	   &kp B     &kp C_MUTE         &mmv MOVE_DOWN               &kp N &mt RBKT M    &kp COMMA          &kp DOT     &kp FSLH       &kp C_MUTE
 
@@ -174,7 +174,7 @@
             display-name = "DVORAK";
 	    // 0 14 28 42 
             bindings = <
-&none  &kp SEMI     &kp COMMA    &kp DOT        &kp P         &kp Y                           &mmv MOVE_UP                &kp F &kp G         &kp C        &kp R       &kp L       &kp C_VOL_UP
+&none  &kp SEMI     &kp COMMA    &kp DOT        &kp P         &kp Y                           &mmv MOVE_UP                &kp F &kp G         &kp C        &kp R       &mt L FSLH       &kp C_VOL_UP
 &cps   &hml LGUI A  &hml LALT O  &hml LCTRL E  &hml LSHIFT U  &mt LS(FSLH) I    &mmv MOVE_LEFT &mkp LCLK &mmv MOVE_RIGHT  &kp D &hmr RSHIFT H &hmr RCTRL T &hmr RALT N &hmr RGUI S &kp C_VOL_DN
 &none  &mt LS(SINGLE_QUOTE) SINGLE_QUOTE &kp Q &kp J &kp K    &kp X    &kp C_MUTE            &mmv MOVE_DOWN               &kp B &kp M         &kp W        &kp V       &kp Z       &kp C_MUTE
 
@@ -187,9 +187,9 @@
         number_layer {
             display-name = "NUMBER";
             bindings = <
-&none  &kp LS(N5)       &kp LS(N6)     	     &kp LS(N4)   &kp LS(N4)   &kp BSLH                          &mmv MOVE_UP                &mt LS(MINUS) MINUS &kp N7         &kp N8        &kp N9       &kp FSLH         &kp C_BRI_UP
+&none  &kp LS(N5)       &kp LS(N6)     	     &kp LS(N4)   &kp LS(N3)   &kp BSLH                          &mmv MOVE_UP                &mt LS(MINUS) MINUS &kp N7         &kp N8        &kp N9       &kp FSLH         &kp C_BRI_UP
 &none  &kp LS(N2)       &num_s               &num_d       &num_f       &mt LS(FSLH) LS(N1)  &mmv MOVE_LEFT &mkp LCLK &mmv MOVE_RIGHT &mt LS(EQUAL) EQUAL &hmr RSHIFT N4 &hmr RCTRL N5 &hmr RALT N6 &hmr RGUI LS(N8) &kp C_BRI_DN
-&none  &kp SINGLE_QUOTE &kp LS(SINGLE_QUOTE) &kp LS(BSLH) &kp LS(BSLH) &kp GRAVE         &kp C_MUTE     &mmv MOVE_DOWN               &kp N0              &kp N7         &kp N8        &kp N9       &mt FSLH DOT     &none
+&none  &kp SINGLE_QUOTE &kp LS(SINGLE_QUOTE) &kp LS(BSLH) &kp LS(N7)   &kp GRAVE         &kp C_MUTE     &mmv MOVE_DOWN               &kp N0              &kp N1         &kp N2        &kp N3       &mt FSLH DOT     &none
 
                              &kp TAB &kp ESC &kp SPC                            &kp SPACE &kp ENTER &kp BSPC  
             >;
@@ -201,8 +201,8 @@
             display-name = "ARROWS";
             bindings = <
 &none  &none       &none    &kp LC(LSHIFT) &none      &none                   &mmv MOVE_UP                &kp INS   &kp HOME &kp UP   &kp PG_UP  &none  &none
-&none  &kp LGUI    &kp LALT &kp LCTRL     &kp LSHIFT &kp MCLK  &mmv MOVE_LEFT &mkp LCLK &mmv MOVE_RIGHT  &kp DEL   &kp LEFT &kp DOWN &kp RIGHT  &none  &none
-&none  &kp KP_NLCK &kp RCLK &kp LCLK      &kp LCLK   &kp LCLK    &trans     &mmv MOVE_DOWN               &kp PSCRN &kp END  &kp DOWN &kp PG_DN  &none  &none
+&none  &kp LGUI    &kp LALT &kp LCTRL     &kp LSHIFT &mkp MCLK  &mmv MOVE_LEFT &mkp LCLK &mmv MOVE_RIGHT  &kp DEL   &kp LEFT &kp DOWN &kp RIGHT  &none  &none
+&none  &kp KP_NLCK &mkp RCLK &mkp LCLK      &mkp LCLK   &mkp LCLK    &trans     &mmv MOVE_DOWN               &kp PSCRN &kp END  &kp DOWN &kp PG_DN  &none  &none
 
                              &kp TAB &kp ESC &kp SPC                            &kp SPACE &kp ENTER &kp BSPC  
             >;
@@ -214,7 +214,7 @@
             display-name = "Fn";
             bindings = <
 &none  &none &kp F1 &kp F2  &kp F3  &kp F4                 &mmv MOVE_UP                &none  &none   &none  &none  &none  &none
-&none  &none &kp F5 &kp F6  &kp F7  &kp F8   &mmv MOVE_LEFT &mkp LCLK &mmv MOVE_RIGHT  &kp RSHIFT  &kp RCTRL  &kp RALT   &kp RGUI  &none  &none
+&none  &none &kp F5 &kp F6  &kp F7  &kp F8   &mmv MOVE_LEFT &mkp LCLK &mmv MOVE_RIGHT  &none  &kp RSHIFT  &kp RCTRL  &kp RALT   &kp RGUI   &none
 &none  &none &kp F9 &kp F10 &kp F11 &kp F12    &trans     &mmv MOVE_DOWN               &none  &none   &none   &none  &none  &none
 
                              &kp TAB &kp ESC &kp SPC                            &kp SPACE &kp ENTER &kp BSPC  
