@@ -110,11 +110,23 @@
             tapping-term-ms = <185>;
             bindings = <&mt Q LS(N4)>, <&kp LS(N6)>;
         };
-        tdh2: tap_dance_hold 2 {
+        num_s: num_s {
             compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <3>;
+            #binding-cells = <0>;
             tapping-term-ms = <185>;
-            bindings = <&mt &kp &kp>, <&kp>;
+            bindings = <&mt LBKT LALT>, <&kp RBKT>;
+        };
+        num_d: num_d {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <185>;
+            bindings = <&mt LS(LBKT) LALT>, <&kp LS(RBKT)>;
+        };
+        num_f: num_f {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <185>;
+            bindings = <&mt LS(N9) LALT>, <&kp LS(N0)>;
         };
     };
 
@@ -175,9 +187,10 @@
         number_layer {
             display-name = "NUMBER";
             bindings = <
-&none  &kp LS(N5)         &kp LS(N6)     &kp LS(N4)     &kp LS(N4)        &kp BSLH                                   &mmv MOVE_UP                     &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &kp BSPC
-&none  &kp LS(N2)   &tdh2 LS(9) LALT LS(N0)  &hml LCTRL E  &hml LSHIFT U  &mt LS(FSLH) I    &mmv MOVE_LEFT &mkp LCLK &mmv MOVE_RIGHT  &kp D &hmr RSHIFT H &hmr RCTRL T &hmr RALT N &hmr RGUI S &kp C_VOL_DN
-&none  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                   &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END   &kp PG_DN
+&none  &kp LS(N5)       &kp LS(N6)     	     &kp LS(N4)   &kp LS(N4)   &kp BSLH                          &mmv MOVE_UP                &mt LS(MINUS) MINUS &kp N7         &kp N8        &kp N9       &kp FSLH         &kp C_BRI_UP
+&none  &kp LS(N2)       &num_s               &num_d       &num_f       &mt LS(FSLH) LS(N1)  &mmv MOVE_LEFT &mkp LCLK &mmv MOVE_RIGHT &mt LS(EQUAL) EQUAL &hmr RSHIFT N4 &hmr RCTRL N5 &hmr RALT N6 &hmr RGUI LS(N8) &kp C_BRI_DN
+&none  &kp SINGLE_QUOTE &kp LS(SINGLE_QUOTE) &kp LS(BSLH) &kp LS(BSLH) &kp GRAVE         &kp C_MUTE     &mmv MOVE_DOWN               &kp N0              &kp N7         &kp N8        &kp N9       &mt FSLH DOT     &none
+&
 
                              &kp TAB &kp ESC &kp SPC                            &kp SPACE &kp ENTER &kp BSPC  
             >;
