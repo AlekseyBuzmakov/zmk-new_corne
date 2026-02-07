@@ -200,7 +200,7 @@
         arrow_layer {
             display-name = "ARROWS";
             bindings = <
-&none  &none    &none    &kp LC(LSHIT) &none      &none                   &mmv MOVE_UP                &kp INS   &kp HOME &kp UP   &kp PG_UP  &none  &none
+&none  &none    &none    &kp LC(LSHIFT) &none      &none                   &mmv MOVE_UP                &kp INS   &kp HOME &kp UP   &kp PG_UP  &none  &none
 &none  &kp LGUI &kp LALT &kp LCTRL     &kp LSHIFT &kp MCLK  &mmv MOVE_LEFT &mkp LCLK &mmv MOVE_RIGHT  &kp DEL   &kp LEFT &kp DOWN &kp RIGHT  &none  &none
 &none  &kp NLCK &kp RCLK &kp LCLK      &kp LCLK   &kp LCLK    &trans     &mmv MOVE_DOWN               &kp PSCRN &kp END  &kp DOWN &kp PG_DN  &none  &none
 
