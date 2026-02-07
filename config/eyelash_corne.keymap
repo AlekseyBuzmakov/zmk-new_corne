@@ -190,7 +190,6 @@
 &none  &kp LS(N5)       &kp LS(N6)     	     &kp LS(N4)   &kp LS(N4)   &kp BSLH                          &mmv MOVE_UP                &mt LS(MINUS) MINUS &kp N7         &kp N8        &kp N9       &kp FSLH         &kp C_BRI_UP
 &none  &kp LS(N2)       &num_s               &num_d       &num_f       &mt LS(FSLH) LS(N1)  &mmv MOVE_LEFT &mkp LCLK &mmv MOVE_RIGHT &mt LS(EQUAL) EQUAL &hmr RSHIFT N4 &hmr RCTRL N5 &hmr RALT N6 &hmr RGUI LS(N8) &kp C_BRI_DN
 &none  &kp SINGLE_QUOTE &kp LS(SINGLE_QUOTE) &kp LS(BSLH) &kp LS(BSLH) &kp GRAVE         &kp C_MUTE     &mmv MOVE_DOWN               &kp N0              &kp N7         &kp N8        &kp N9       &mt FSLH DOT     &none
-&
 
                              &kp TAB &kp ESC &kp SPC                            &kp SPACE &kp ENTER &kp BSPC  
             >;
