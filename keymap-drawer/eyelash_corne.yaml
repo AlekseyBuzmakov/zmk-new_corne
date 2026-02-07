@@ -177,7 +177,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - NUMLOCK
+  - KP NLCK
   - RCLK
   - LCLK
   - LCLK
