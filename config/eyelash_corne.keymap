@@ -200,9 +200,9 @@
         arrow_layer {
             display-name = "ARROWS";
             bindings = <
-&none  &none &kp F1 &kp F2  &kp F3  &kp F4                 &mmv MOVE_UP                &none  &none   &none  &none  &none  &none
-&none  &none &kp F5 &kp F6  &kp F7  &kp F8   &mmv MOVE_LEFT &mkp LCLK &mmv MOVE_RIGHT  &kp RSHIFT  &kp RCTRL  &kp RALT   &kp RGUI  &none  &none
-&none  &none &kp F9 &kp F10 &kp F11 &kp F12    &trans     &mmv MOVE_DOWN               &none  &none   &none   &none  &none  &none
+&none  &none    &none    &kp LC(LSHIT) &none      &none                   &mmv MOVE_UP                &kp INS   &kp HOME &kp UP   &kp PG_UP  &none  &none
+&none  &kp LGUI &kp LALT &kp LCTRL     &kp LSHIFT &kp MCLK  &mmv MOVE_LEFT &mkp LCLK &mmv MOVE_RIGHT  &kp DEL   &kp LEFT &kp DOWN &kp RIGHT  &none  &none
+&none  &kp NLCK &kp RCLK &kp LCLK      &kp LCLK   &kp LCLK    &trans     &mmv MOVE_DOWN               &kp PSCRN &kp END  &kp DOWN &kp PG_DN  &none  &none
 
                              &kp TAB &kp ESC &kp SPC                            &kp SPACE &kp ENTER &kp BSPC  
             >;
@@ -213,10 +213,11 @@
         fn_layer {
             display-name = "Fn";
             bindings = <
-&studio_unlock  &kp F1      &kp F2     &kp F3       &kp F4     &kp F5                                  &mmv MOVE_UP                     &kp F6       &kp F7     &kp F8       &kp F9      &kp F10          &kp F11
-&trans          &trans      &mkp LCLK  &mkp MCLK    &mkp RCLK  &mkp MB4                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &bootloader  &mkp LCLK  &mkp MCLK    &mkp RCLK   &kp PRINTSCREEN  &kp F12
-&trans          &sys_reset  &trans     &bootloader  &trans     &mkp MB5  &kp C_MUTE                    &mmv MOVE_DOWN                   &trans       &trans     &bootloader  &sys_reset  &kp SCROLLLOCK   &kp PAUSE_BREAK
-                                       &trans       &trans     &trans                                                                   &trans       &trans     &trans
+&none  &none &kp F1 &kp F2  &kp F3  &kp F4                 &mmv MOVE_UP                &none  &none   &none  &none  &none  &none
+&none  &none &kp F5 &kp F6  &kp F7  &kp F8   &mmv MOVE_LEFT &mkp LCLK &mmv MOVE_RIGHT  &kp RSHIFT  &kp RCTRL  &kp RALT   &kp RGUI  &none  &none
+&none  &none &kp F9 &kp F10 &kp F11 &kp F12    &trans     &mmv MOVE_DOWN               &none  &none   &none   &none  &none  &none
+
+                             &kp TAB &kp ESC &kp SPC                            &kp SPACE &kp ENTER &kp BSPC  
             >;
 
             sensor-bindings = <&scroll_encoder>;
