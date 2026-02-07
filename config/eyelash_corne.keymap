@@ -108,7 +108,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <185>;
-            bindings = <&mt Q LS(N4)>, <&kp LS(N6)>;
+            bindings = <&mt LS(N4) Q>, <&kp LS(N6)>;
         };
         num_s: num_s {
             compatible = "zmk,behavior-tap-dance";
@@ -120,7 +120,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <185>;
-            bindings = <&mt LCTLR LS(LBKT)>, <&kp LS(RBKT)>;
+            bindings = <&mt LCTRL LS(LBKT)>, <&kp LS(RBKT)>;
         };
         num_f: num_f {
             compatible = "zmk,behavior-tap-dance";
