@@ -160,7 +160,7 @@
         bthclr {
             bindings = <&bt BT_CLR>;
             key-positions = <14 44  45 27>;
-        }
+        };
     };
 
     keymap {
