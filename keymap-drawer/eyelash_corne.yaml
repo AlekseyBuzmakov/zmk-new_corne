@@ -8,11 +8,11 @@ layers:
   - R
   - {t: T, h: '`'}
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
-  - Y
+  - {t: Y, h: '-'}
   - {t: U, h: '['}
   - {t: I, h: ''''}
   - O
-  - {t: Sft+\, h: P, s: Sft+|}
+  - {t: P, h: Sft+\}
   - $$mdi:volume-high$$
   - '&cps'
   - {t: A, h: LGUI}
@@ -57,11 +57,11 @@ layers:
   - P
   - Y
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
-  - F
+  - {t: F, h: '-'}
   - G
   - C
   - R
-  - {t: /, h: L, s: '?'}
+  - {t: L, h: /}
   - $$mdi:volume-high$$
   - '&cps'
   - {t: A, h: LGUI}
@@ -210,7 +210,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '&blueth'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - F5
   - F6
@@ -248,3 +248,5 @@ layers:
 combos:
 - p: [1, 15, 29]
   k: '&soft_off'
+- p: [14, 44, 45, 27]
+  k: $$mdi:bluetooth-off$$
